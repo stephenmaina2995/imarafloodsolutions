@@ -1,0 +1,25 @@
+div{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+p{
+    font-size: 1.5rem;
+}
+input{
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+label, .link{
+    margin: 0;
+    float: left;
+}
+
+.link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: blue;
+    padding: 10px;
+}
