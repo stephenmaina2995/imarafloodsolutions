@@ -24,10 +24,13 @@ const Login = ({handleLogin}) => {
     return(
         <div>
             <form onSubmit={handleSubmit}>
+                <p>Login</p>
+                <label>Email Address</label>
                 <input type="email" value={user.email} name="email" id = "email" onChange={handleChange}/>
+                <label>Password</label>
                 <input type="password" value={user.password} name="password" id = "password" onChange={handleChange}/>
+                <Link className="link" to="/signup">Signup</Link>
             </form>
-            <Link to="/signup">Sign Up</Link>
         </div>
     )
 
