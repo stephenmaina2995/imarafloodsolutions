@@ -1,4 +1,5 @@
 import { useState } from "react"
+import {Link} from "react-router-dom"
 
 const SignUp = ({handleSignUp}) => {
     const [user, setUser] = useState({
@@ -26,6 +27,7 @@ const SignUp = ({handleSignUp}) => {
                 <input type="username" value={user.username} name="username" id = "username" onChange={handleChange}/>
                 <input type="password" value={user.password} name="password" id = "password" onChange={handleChange}/>
             </form>
+            <Link to="/login">Login</Link>
         </div>
     )
 

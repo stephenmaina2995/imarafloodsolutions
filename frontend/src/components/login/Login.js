@@ -1,6 +1,8 @@
 import { useState } from "react"
+import {Link} from "react-router-dom"
 
 const Login = ({handleLogin}) => {
+    
     const [user, setUser] = useState({
         email:"",
         password:""
@@ -25,7 +27,7 @@ const Login = ({handleLogin}) => {
                 <input type="email" value={user.email} name="email" id = "email" onChange={handleChange}/>
                 <input type="password" value={user.password} name="password" id = "password" onChange={handleChange}/>
             </form>
-            <a href="/signup">Sign up</a>
+            <Link to="/signup">Sign Up</Link>
         </div>
     )
 
