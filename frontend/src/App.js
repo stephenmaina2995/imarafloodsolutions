@@ -9,13 +9,33 @@ function App() {
       headers:{"Content-Type":"application/json"},
       body:JSON.stringify(user)
     })
+    .then(response => {
+      if (response.status === 200){
+        console.log("Successful")
+      }
+    })
+
+  }
+
+  const handleSignUp = (user) => {
+    fetch("/login", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(user)
+    })
+    .then(response => {
+      if (response.status === 200){
+        console.log("Successful")
+      }
+    })
+
 
   }
   return (
     <div className="App">
       <Routes>
         <Route path='/login' element = {<Login handleLogin = {handleLogin}/>}></Route>
-        <Route path='/signup' element = {<SignUp />}></Route>
+        <Route path='/signup' element = {<SignUp handleSignUp = {handleSignUp} />}></Route>
       </Routes>
     </div>
   );
